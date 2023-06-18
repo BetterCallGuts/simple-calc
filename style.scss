@@ -1,0 +1,141 @@
+*, 
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    animation: color 40s infinite alternate;
+}
+
+.calculator{
+    background-color: rgba(252, 252, 252, 0);
+    width: 400px;
+    height: 600px;
+    animation: shadow alternate infinite 2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    
+
+}
+
+.monitor{
+    height: 25%;
+    width: 100%;
+    background-color: rgba(55, 54, 54, 0.518);
+    box-shadow: 0px 0px 10px rgba(42, 42, 42, 0.671);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.monitor textarea{
+    width: 100%;
+    background-color: rgba(240, 248, 255, 0);
+    resize: none;
+    border: none 0px;
+    outline: none 0px;
+    color: white;
+    cursor:auto;
+    padding: 10px;
+    font-size: 22px;
+    height: 100%;
+
+}
+
+
+
+.buttons{
+    height: 75%;
+    width: 100%;
+    background-color: rgba(108, 108, 108, 0.27);
+    display: grid;
+    gap:12px;
+    grid-template-columns:repeat(4,1fr);
+    box-shadow: 0px 0px 10px black;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.btn{
+    background-color: rgba(46, 65, 90, 0.647);
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate alternate 4s infinite;
+}
+
+.btn:hover{
+    transform: scale(1.1) ;
+}
+
+.last{
+    grid-column: span 2;
+}
+
+@keyframes color {
+    0%{
+        
+        background-color: orange;
+    }
+
+    10%{
+        background-color: rgb(38, 153, 84);
+    }
+    20%{
+        background-color: rgb(152, 158, 46);
+    }
+    40%{
+        background-color: rgb(77, 19, 94);
+    }
+    60%{
+        background-color: rgb(46, 160, 91);
+    }
+    70%{
+        background-color: rgb(68, 182, 186);
+    }
+    80%{
+        background-color: rgb(28, 90, 131);
+    }
+    100%{
+        background-color: rgb(23, 11, 69);
+    }
+}
+
+/* @keyframes shadow{
+    from{
+        box-shadow: 5px 0px 10px black;
+    }
+    to{
+        box-shadow:-5px 0px 10px black;
+    } */
+
+/* 
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+} */
